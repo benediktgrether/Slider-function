@@ -1,0 +1,43 @@
+.headline {
+  text-align: center;
+  font-size: 36pt;
+}
+.box--container {
+  margin-top: 50px;
+}
+.container-slider {
+  position: relative;
+  top: 0px;
+  width: auto;
+  height: 500px;
+  background-color: #a9a9a9;
+}
+.box--big {
+  position: absolute;
+  width: 500px;
+  height: 400px;
+  background-color: #000;
+}
+.box--small {
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  background-color: #000;
+}
+.box--small-top {
+  position: absolute;
+  top: 170px;
+  width: 200px;
+  height: 150px;
+  background-color: #000;
+}
+.container--left {
+  margin-left: -40px;
+}
+.sometext {
+  text-align: justify;
+  position: absolute;
+  top: 340px;
+  margin-left: -15px;
+  margin-right: 100px;
+}

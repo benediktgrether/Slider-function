@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main2.css">
+    <title>Slider</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="headline">Slider</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 box--container">
+                <div class="container-slider">
+                    <div class="col-xs-offset-2 col-xs-4">
+                        <div class="box--big">
+                            <img class="box--big-img" src="./picture/destiny_1/Destiny1.jpg" alt="Destiny1.jpg">
+                        </div>
+                    </div>
+                    <div class="container--small">
+                        <div class="col-xs-2">
+                            <div class="box--small"><img class="box--small-img" src="./picture/destiny_1/small_1.jpg" alt="small_1.jpg"></div>
+                            <div class="box--small-top"><img class="box--small-img" src="./picture/destiny_1/small_3.jpg" alt="small_3.jpg"></div>
+                        </div>
+                        <div class="col-xs-2 position-left">
+                            <div class="box--small"><img class="box--small-img" src="./picture/destiny_1/small_2.jpg" alt="small_2.jpg"></div>
+                            <div class="box--small-top"><img class="box--small-img" src="./picture/destiny_1/small_4.jpg" alt="small_4.jpg"></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <p class="sometext">Some Text: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                            justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+                            dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonum</p>
+                    </div>
+                </div>
+                <div class="container-slider" style="display: none;">
+                    <div class="col-xs-offset-2 col-xs-4">
+                        <div class="box--big"></div>
+                    </div>
+                    <div class="container--small">
+                        <div class="col-xs-2">
+                            <div class="box--small">new</div>
+                            <div class="box--small-top">new</div>
+                        </div>
+                        <div class="col-xs-2 position-left">
+                            <div class="box--small">new</div>
+                            <div class="box--small-top">new</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <p class="sometext">Some Text: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                            justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+                            dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonum</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 button--color">
+                <div class="button">
+                    <div class="col-xs-offset-2 col-xs-1">
+                        <div class="btn btn--left">&#10094;</div>
+                        <div class="onclick" onclick="plusDivs(-1)"></div>
+                    </div>
+                    <div class="col-xs-offset-5 col-xs-1">
+                        <div class="btn btn--right">&#10095;</div>
+                        <div class="onclick" onclick="plusDivs(1)"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("container-slider");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script> 
+
+</body>
+
+</html>
